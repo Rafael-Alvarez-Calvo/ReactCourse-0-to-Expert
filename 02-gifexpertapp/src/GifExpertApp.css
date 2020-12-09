@@ -1,0 +1,35 @@
+.Container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    background-color: rgb(46, 50, 53);
+    border: 1px solid rgb(157, 43, 233);
+    border-radius: 15px;
+    box-shadow: 0 0 10px 2px rgb(157, 43, 233);
+    color: azure;
+    padding: 10px 0 10px 0;
+}
+.containerTitleSearch{
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    background-color: rgb(46, 50, 53);
+    border: 1px solid rgb(157, 43, 233);
+    box-shadow: 0 0 10px 2px rgb(157, 43, 233);
+    color: azure;
+    border-radius: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 25% 10px 25%;
+
+}
