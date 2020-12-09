@@ -18,8 +18,7 @@ const GifExpertApp = () => {
             <h1>GifExpertApp</h1>
             <AddCategory setCategories={setCategories}/>
             <hr />
-            {/* <button onClick={handleAdd}>Añadir</button> */}
-            <div className="containerTitleSearch"><h3>{categories}</h3></div>
+            <div className="containerTitleSearch animate__animated animate__fadeIn"><h3>{categories}</h3></div>
             <ol className="Container">
                 {categories.map(category =>
                     <GifGrid 

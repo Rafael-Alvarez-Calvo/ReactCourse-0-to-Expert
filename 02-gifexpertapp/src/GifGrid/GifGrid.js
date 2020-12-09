@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { useFetchGifs } from '../Hooks/useFetchGifs'
 import { GifGridItem } from '../GifGridItem/GifGridItem';
-import {GetGifs} from '../GetGifs/GetGifs'
+import '../GifGrid/GifGrid.css'
+
+// import React, { useState, useEffect } from 'react'
+// import {GetGifs} from '../GetGifs/GetGifs'
 
 export const GifGrid = ({category}) => {
 
+    const {data, loading} = useFetchGifs(category);
+
+
     // const [Counter, setCounter] = useState(0);
 
-    const [Images, setImages] = useState([])
-    useEffect(() =>{ 
-        GetGifs(category)
-            .then(setImages)
-    }, [category]) //El array de dependencias vacio, hace que solo se pueda ejecutar una vez esa funcion
+    // const [Images, setImages] = useState([])
+    // useEffect(() =>{ 
+    //     GetGifs(category)
+    //         .then(setImages)
+    // }, [category]) //El array de dependencias vacio, hace que solo se pueda ejecutar una vez esa funcion, con category en la dependencia hacemos que ese codigoo se ejecute siempre que la caegory cambie
 
     // const getGifs = async() =>{
 
@@ -32,17 +39,23 @@ export const GifGrid = ({category}) => {
 
     // }
 
+    //Se puede hacer el fetch aqui tambien pero se hace como helper
+
     return (
         <>
             {/* <h2>{category}</h2> */}
 
+            {loading && <p className="loading animate__animated animate__flash">Loading...</p>}
+            {/* {loading ? 'Cargando...' : 'Gifs cargados'} */}
+
             {
-                Images.map(d =>
+                data.map(d =>
                     <GifGridItem 
                         key= {d.id}
-                        { ...d }/> /*mandamos todos los elementos*/
+                        { ...d } /> /*mandamos todos los elementos*/
                     )
             }
+
             {/* {Images.map(({id, title}) =>{
                 return <li id={id} key={id}> {title} </li>
                 })
