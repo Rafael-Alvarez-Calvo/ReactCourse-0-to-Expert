@@ -1,7 +1,0 @@
-Para subir mi react como repositorio en github:
-borrar los .git ocultos de cada una de mis carpetas con react instalado, esto hara que no se reconozcan como repositorio individual cada una
-git init inicializa un repositorio vacio local
-git remote add origin <url repositorio creado en git> con esto conectamos nuestra repo con la carpeta en la que estamos
-git add *
-git commit -m ""
-git push --set-upstream origin master
