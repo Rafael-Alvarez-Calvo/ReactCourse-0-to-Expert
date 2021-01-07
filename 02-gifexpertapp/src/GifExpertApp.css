@@ -33,3 +33,13 @@ h3{
     padding: 10px 25% 10px 25%;
 
 }
+
+#paginationContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pagination{
+    color: aliceblue;
+}

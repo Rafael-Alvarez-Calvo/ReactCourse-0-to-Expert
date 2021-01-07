@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { MultipleCustomHooks } from './components/Examples/MultipleCustomHooks';
-// import { FormWithCustomHook } from './components/useEffect/FormWithCustomHook';
+// import { MultipleCustomHooks } from './components/Examples/MultipleCustomHooks';
+import { FormWithCustomHook } from './components/useEffect/FormWithCustomHook';
 // import { SimpleForm } from './components/useEffect/SimpleForm';
 // import { CounterWithCustomHook } from './components/useState/CounterWithCustomHook';
 // import { CounterApp } from './components/useState/CounterApp';
@@ -15,8 +15,8 @@ ReactDOM.render(
     // <CounterApp />,
     // <CounterWithCustomHook />,
     // <SimpleForm />,
-    // <FormWithCustomHook />,
-    <MultipleCustomHooks />,
+    <FormWithCustomHook />,
+    // <MultipleCustomHooks />,
     document.getElementById('root')
 );
 
