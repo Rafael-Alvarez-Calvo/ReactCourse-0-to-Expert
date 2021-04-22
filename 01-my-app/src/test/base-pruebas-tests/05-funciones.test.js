@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom';
-import { getUser } from "../../base-pruebas/05-funciones";
-
+import { getActiveUser, getUser } from "../../base-pruebas/05-funciones";
 
 describe('Test 05-Funciones', () => {
 
@@ -17,5 +16,19 @@ describe('Test 05-Funciones', () => {
 
         expect( user ).toEqual( userTest ); //toEqual operator is strictly comparing an object with other object, they must have the same keys and the same values to pass the test
 
-    })
-})
+    });
+
+    test('getActiveUser() must return an object', () => {
+
+        const nombre = 'Rafa';
+        const activeUser = getActiveUser(nombre);
+
+        expect( activeUser ).toEqual({
+            uid: 'ABC567',
+            username: nombre
+        }); 
+        
+        //toEqual operator is strictly comparing an object with other object, they must have the same keys and the same values to pass the test
+
+    });
+});

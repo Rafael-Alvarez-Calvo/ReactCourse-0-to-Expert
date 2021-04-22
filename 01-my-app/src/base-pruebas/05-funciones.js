@@ -28,12 +28,12 @@ const user = getUser();
 // console.log(user);
 
 // Tarea
-const getUsuarioActivo = ( nombre ) =>({
+export const getActiveUser = ( nombre ) =>({
     uid: 'ABC567',
     username: nombre
 })
 
-const usuarioActivo = getUsuarioActivo('Fernando');
+const usuarioActivo = getActiveUser('Fernando');
 // console.log( usuarioActivo );
 
 
